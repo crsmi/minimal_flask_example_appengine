@@ -12,11 +12,6 @@ app = Flask(__name__)
 # load our pre-trained model & function
 forecast_api = get_forecast_api()
 
-# Define our "ping" end point
-@app.route('/ping')
-def useless_output():
-  return(useless_function())
-
 # Define a post method for our API.
 @app.route('/forecast', methods=['POST'])
 def forecast():
